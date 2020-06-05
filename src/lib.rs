@@ -12,3 +12,5 @@ pub mod file;
 pub mod hash;
 pub mod log;
 pub mod url;
+pub mod map_render;
+pub mod jobs;

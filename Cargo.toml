@@ -16,3 +16,11 @@ crypto-hash = "0.3"
 failure = "0.1"
 hex = "0.3"
 percent-encoding = "1.0"
+structopt = "0.3.3"
+structopt-derive = "0.4.0"
+serde = "1.0.27"
+serde_derive = "1.0.27"
+serde_json = "1.0.9"
+rayon = "1.0.0"
+dreammaker = { git = "https://github.com/AffectedArc07/ParaSpacemanDMM" }
+dmm-tools = { git = "https://github.com/AffectedArc07/ParaSpacemanDMM", features = ["png"] }
