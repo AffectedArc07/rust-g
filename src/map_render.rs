@@ -56,14 +56,10 @@ fn invoker(path: &str) -> Result<String, String> {
     let opt = Opt {
         environment: Some("paradise.dme".to_string()),
         command: cmd,
-        jobs: 8,
+        jobs: 1,
     };
 
     context.dm_context.set_print_severity(Some(dm::Severity::Error));
-    rayon::ThreadPoolBuilder::new()
-        .num_threads(opt.jobs)
-        .build_global()
-        .expect("failed to initialize thread pool");
     context.parallel = opt.jobs != 1;
 
     run(&opt, &opt.command, &mut context);
