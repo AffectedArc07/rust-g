@@ -159,6 +159,14 @@ fn main() {
 "#).unwrap();
     }
 
+    // module: sql
+    if enabled!("TOML2JSON") {
+        write!(f, r#"
+// toml2json stuff //
+#define rustg_toml2json(tomlfile) call(RUST_G, "toml2json")(tomlfile)
+"#).unwrap();
+    }
+
     // Version footer
     write!(f, "
 // RUSTG Version //

@@ -49,6 +49,8 @@ pub mod noise_gen;
 pub mod sql;
 #[cfg(feature = "url")]
 pub mod url;
+#[cfg(feature = "toml2json")]
+pub mod toml2json;
 
 #[cfg(not(target_pointer_width = "32"))]
 compile_error!("rust-g must be compiled for a 32-bit target");
